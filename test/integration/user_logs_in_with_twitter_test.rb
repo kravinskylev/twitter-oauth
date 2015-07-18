@@ -3,6 +3,7 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
   include Capybara::DSL
   def setup
     Capybara.app = OauthWorkshop::Application
+    stub_omniauth
   end
 
   test "logging in" do
