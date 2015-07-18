@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root "welcome#index"
-  get "login", to: "/auth/twitter"
+  get "/auth/twitter", as: "/login", to: "sessions#new"
 end
